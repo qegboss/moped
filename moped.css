@@ -30,7 +30,7 @@ a {
     width: 100vw;
     top: 0;
     right: 0;
-    z-index: 999;
+    z-index: 1000;
 }
 
 .site-header-wrapper-inner {
@@ -116,19 +116,27 @@ a {
 .model {
     background: url(./img/Gemini_Generated_Image_faxklxfaxklxfaxk.png) no-repeat center/cover;
     padding: var(--section-padding);
-    height: 100vh;
+    /* height: auto;
+    min-height: 100vh;
+    min-height: 100dvh; */
+    max-height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .slider {
     /* position: absolute;
     bottom: 6vw;
     right: 0; */
-    padding-top: 80px;
+    padding-top: min(4vh, 100px) ;
 }
 
 .slider-wrapper {
     position: relative;
-    height: 100%;
+    height: auto;
+    width: 100%;
+    flex: none;
 }
 
 .slider-card {
@@ -206,6 +214,7 @@ a {
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
+    transform: translateY(30px);
 }
 .slider-button-left-arrow {
     display: inline-block;
@@ -282,4 +291,14 @@ a {
 .slider-button-right svg,
 .slider-button-left svg{
 display: none;
+}
+/* СЕКЦИЯ ABOUT */
+.about{
+    .model {
+    background: url(./img/IMG_4668.jpg) no-repeat center/cover;
+    padding: var(--section-padding);
+    height: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
 }
